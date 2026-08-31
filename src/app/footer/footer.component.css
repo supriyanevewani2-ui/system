@@ -1,0 +1,105 @@
+/* Footer background and text styling */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Footer title styles */
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00e5ff;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Link styling */
+.footer-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.footer-link:hover {
+  color: #00e5ff;
+}
+
+/* Social media links styling */
+.social-links i {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for social icons */
+.social-link:hover i {
+  transform: scale(1.2);
+  color: #00e5ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer .row {
+    text-align: center;
+  }
+
+  .footer-title {
+    margin-top: 20px;
+  }
+}
+
+/* Footer bottom line styling */
+.footer .list-unstyled {
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+/* Footer text */
+.footer p {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for links */
+.footer-link {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

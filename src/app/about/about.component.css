@@ -1,0 +1,91 @@
+/* Container and Form Styling */
+.right-form {
+    border-radius: 20px; /* Rounded corners */
+    width: 100%; /* Full width of its container */
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  /* On hover, form gets a slight lift */
+  .right-form:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Darker shadow */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    border-radius: 10px; /* Rounded corners for input fields */
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  
+  .card-title {
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .card {
+    height: 90vh; /* Set form height to 80% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Additional styling for positioning the form on the right half of the screen */
+  .container {
+    display: flex;
+    justify-content: flex-end; /* Align the form to the right */
+  }
+  
+  .row {
+    width: 100%;
+    justify-content: flex-end; /* Align the form in the row to the right */
+  }
+  
+  .col-md-6 {
+    width: 50%; /* Form takes up half the screen */
+  }
+  
+  /* Custom button style */
+  .custom-btn {
+    padding: 8px 18px; /* Reduced padding for a smaller button */
+    border-radius: 50px; /* Rounded button */
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    width: auto; /* Make button width fit content */
+    max-width: 200px; /* Limit max width of button */
+    margin-top: 20px;
+    margin-left: auto; /* Center button horizontally */
+    margin-right: auto;
+  }
+  
+  /* Button hover effect */
+  .custom-btn:hover {
+    background-color: #0d6efd;
+    box-shadow: 0px 4px 8px rgba(13, 110, 253, 0.3); /* Subtle shadow */
+    transform: translateY(-2px); /* Lift the button when hovered */
+  }
+  
+  .custom-btn:active {
+    background-color: #0a58ca; /* Darker blue when clicked */
+    transform: translateY(0); /* Button back to normal */
+  }
+  
+  .custom-btn:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  

@@ -1,0 +1,454 @@
+
+<!-- =========================================
+     HOME PAGE
+========================================= -->
+
+<section class="home-page">
+
+  <!-- =========================================
+       ROTATING ANNOUNCEMENT BAR
+  ========================================== -->
+
+  <div class="announcement-bar">
+
+    <div class="announcement-track">
+
+      <span>🚀 Driving digital transformation and talent growth</span>
+      <span>💡 Turning ideas into innovative digital solutions</span>
+      <span>🎓 Building skills. Building technology. Building futures.</span>
+      <span>⚡ Empowering businesses and technology professionals</span>
+
+      <!-- Duplicate for seamless animation -->
+
+      <span>🚀 Driving digital transformation and talent growth</span>
+      <span>💡 Turning ideas into innovative digital solutions</span>
+      <span>🎓 Building skills. Building technology. Building futures.</span>
+      <span>⚡ Empowering businesses and technology professionals</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       HERO SECTION
+  ========================================== -->
+
+  <section class="hero-section">
+
+
+    <!-- =======================================
+         MAIN HEADING
+    ======================================== -->
+
+    <div class="hero-heading">
+
+      <h1 class="main-heading">
+
+        <!-- FIRST LINE -->
+
+        <span class="heading-line heading-line-one">
+
+          @for (letter of lineOne; track $index) {
+
+            @if (letter === ' ') {
+
+              <span
+                class="heading-letter space"
+                [style.animation-delay.ms]="$index * 35">
+                &nbsp;
+              </span>
+
+            } @else {
+
+              <span
+                class="heading-letter"
+                [style.animation-delay.ms]="$index * 35">
+                {{ letter }}
+              </span>
+
+            }
+
+          }
+
+        </span>
+
+
+        <!-- SECOND LINE -->
+
+        <span class="heading-line heading-line-two">
+
+          @for (letter of lineTwo; track $index) {
+
+            @if (letter === ' ') {
+
+              <span
+                class="heading-letter space"
+                [style.animation-delay.ms]="800 + ($index * 35)">
+                &nbsp;
+              </span>
+
+            } @else {
+
+              <span
+                class="heading-letter"
+                [style.animation-delay.ms]="800 + ($index * 35)">
+                {{ letter }}
+              </span>
+
+            }
+
+          }
+
+        </span>
+
+      </h1>
+
+
+      <!-- HEADING DECORATION -->
+
+      <div class="heading-decoration">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =======================================
+         TWO COLUMN SECTION
+    ======================================== -->
+
+    <div class="hero-content">
+
+
+      <!-- =====================================
+           LEFT IMAGE
+      ====================================== -->
+
+      <div class="hero-image">
+
+        <!-- Animated glow -->
+
+        <div class="image-glow"></div>
+
+        <!-- Background circle -->
+
+        <div class="image-background-circle"></div>
+
+        <!-- Orbits -->
+
+        <div class="image-orbit orbit-one"></div>
+
+        <div class="image-orbit orbit-two"></div>
+
+
+        <!-- Main Image -->
+
+        <img
+          src="assets/homepage.png"
+          alt="Technology and Talent Development"
+          class="main-image"
+        >
+
+
+        <!-- Floating Technology Badge -->
+
+        <div class="floating-badge badge-one">
+
+          <div class="badge-icon">
+            💻
+          </div>
+
+          <div>
+
+            <strong>Technology</strong>
+
+            <small>Build & Innovate</small>
+
+          </div>
+
+        </div>
+
+
+        <!-- Floating Talent Badge -->
+
+        <div class="floating-badge badge-two">
+
+          <div class="badge-icon">
+            🎓
+          </div>
+
+          <div>
+
+            <strong>Talent</strong>
+
+            <small>Learn & Grow</small>
+
+          </div>
+
+        </div>
+
+
+        <!-- Floating particles -->
+
+        <div class="particle particle-one"></div>
+        <div class="particle particle-two"></div>
+        <div class="particle particle-three"></div>
+        <div class="particle particle-four"></div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           RIGHT SIDE CONTENT
+      ====================================== -->
+
+      <div class="hero-text">
+
+
+        <!-- INTRO BADGE -->
+
+        <div class="intro-badge">
+
+          <span class="intro-star">✦</span>
+
+          <span>
+            INNOVATION • TECHNOLOGY • TALENT
+          </span>
+
+        </div>
+
+
+        <!-- HEADING -->
+
+        <h2>
+
+          Ideas become innovation.
+
+          <br>
+
+          <span>Skills make it happen.</span>
+
+        </h2>
+
+
+        <!-- DESCRIPTION -->
+
+        <p>
+          Every application starts with an idea.
+          Every innovation starts with a skilled mind.
+        </p>
+
+
+        <p>
+          We help organisations transform ideas into
+          digital products while helping individuals
+          transform potential into expertise.
+        </p>
+
+
+        <!-- ECOSYSTEM -->
+
+        <div class="ecosystem">
+
+          <span>One ecosystem.</span>
+
+          <strong>Two missions.</strong>
+
+        </div>
+
+
+
+        <!-- =====================================
+             MISSION LINKS
+        ====================================== -->
+
+        <div class="mission-links">
+
+
+          <!-- TECHNOLOGY -->
+
+          <a
+            routerLink="/services"
+            class="mission-card build-card">
+
+            <div class="mission-icon">
+
+              <div class="rotating-ring"></div>
+
+              <div class="icon-core">
+                ⚙
+              </div>
+
+            </div>
+
+
+            <div class="mission-content">
+
+              <span class="mission-label">
+                BUILD WITH US
+              </span>
+
+              <strong>
+                Technology Services
+              </strong>
+
+              <small>
+                Build powerful digital solutions
+              </small>
+
+            </div>
+
+
+            <div class="mission-arrow">
+              →
+            </div>
+
+          </a>
+
+
+
+          <!-- TALENT -->
+
+          <a
+            routerLink="/courses"
+            class="mission-card learn-card">
+
+            <div class="mission-icon">
+
+              <div class="rotating-ring"></div>
+
+              <div class="icon-core">
+                ✦
+              </div>
+
+            </div>
+
+
+            <div class="mission-content">
+
+              <span class="mission-label">
+                LEARN WITH US
+              </span>
+
+              <strong>
+                Talent Development
+              </strong>
+
+              <small>
+                Turn potential into expertise
+              </small>
+
+            </div>
+
+
+            <div class="mission-arrow">
+              →
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       VISION STRIP
+  ========================================== -->
+
+  <section class="vision-section">
+
+
+    <div class="vision-item">
+
+      <div class="vision-number">
+        01
+      </div>
+
+      <div class="vision-icon">
+        💡
+      </div>
+
+      <div>
+
+        <strong>Imagine</strong>
+
+        <p>
+          Ideas that create possibilities.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="vision-divider"></div>
+
+
+
+    <div class="vision-item">
+
+      <div class="vision-number">
+        02
+      </div>
+
+      <div class="vision-icon">
+        🚀
+      </div>
+
+      <div>
+
+        <strong>Build</strong>
+
+        <p>
+          Technology that creates impact.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="vision-divider"></div>
+
+
+
+    <div class="vision-item">
+
+      <div class="vision-number">
+        03
+      </div>
+
+      <div class="vision-icon">
+        🎯
+      </div>
+
+      <div>
+
+        <strong>Learn</strong>
+
+        <p>
+          People who create the future.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>

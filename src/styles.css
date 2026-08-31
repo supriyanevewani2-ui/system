@@ -1,0 +1,17 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+/* Soft gradient background for the entire webpage */
+body {
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Light gray to white gradient */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  .bg-gradient-primary { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+  .bg-gradient-success { background: linear-gradient(135deg, #00b09b, #96c93d); }
+  .bg-gradient-info    { background: linear-gradient(135deg, #56ccf2, #2f80ed); }
+  .bg-gradient-warning { background: linear-gradient(135deg, #f7971e, #ffd200); }
+  .bg-gradient-danger  { background: linear-gradient(135deg, #f857a6, #ff5858); }
+  .bg-gradient-dark    { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
+  

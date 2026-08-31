@@ -1,0 +1,14 @@
+.banner {
+    width: 100%;
+    margin-top: 70px;
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 300px; /* Your desired fixed height */
+    object-fit: contain; /* Fit full image without cropping */
+    display: block;
+    background-color: #fff; /* Optional: background for letterboxing */
+  }
+  

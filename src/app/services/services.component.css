@@ -1,0 +1,45 @@
+.card {
+    width: 80%; /* Decrease width to 80% of its container */
+    height: 300px; /* Increase height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Center card horizontally */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+    height: 100%; /* Full height for card body */
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Increase title font size */
+    font-weight: bold;
+    margin-bottom: 15px; /* Add spacing below title */
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px; /* Add spacing below description */
+  }
+  
+  .see-more-link {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Set text color to white */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .see-more-link:hover {
+    color: #f1f1f1; /* Lighter color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
