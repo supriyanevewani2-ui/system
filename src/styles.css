@@ -15,3 +15,52 @@ body {
   .bg-gradient-danger  { background: linear-gradient(135deg, #f857a6, #ff5858); }
   .bg-gradient-dark    { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
   
+/* =========================================
+   MOBILE HORIZONTAL OVERFLOW FIX
+========================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent Bootstrap rows/components
+   from becoming wider than the screen */
+.row {
+  max-width: 100%;
+}
+
+/* Images cannot exceed their container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  html,
+  body,
+  app-root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+  }
+}
