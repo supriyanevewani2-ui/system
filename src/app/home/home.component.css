@@ -1,4 +1,3 @@
-
 /* =========================================
    HOME PAGE
 ========================================= */
@@ -52,7 +51,6 @@
     0 4px 18px rgba(0, 119, 182, 0.2);
 }
 
-
 @keyframes barGradient {
 
   0% {
@@ -69,7 +67,6 @@
 
 }
 
-
 .announcement-track {
 
   display: flex;
@@ -81,7 +78,6 @@
   animation:
     announcementMove 30s linear infinite;
 }
-
 
 .announcement-track span {
 
@@ -97,7 +93,6 @@
 
   letter-spacing: 0.3px;
 }
-
 
 @keyframes announcementMove {
 
@@ -118,12 +113,16 @@
 
 .hero-section {
 
+  width: 100%;
+
   max-width: 1500px;
 
   margin: auto;
 
   padding:
     70px 6% 35px;
+
+  box-sizing: border-box;
 }
 
 
@@ -133,13 +132,14 @@
 
 .hero-heading {
 
+  width: 100%;
+
   text-align: center;
 
   margin-bottom: 60px;
 
   perspective: 1200px;
 }
-
 
 .main-heading {
 
@@ -159,7 +159,7 @@
 
 
 /* =========================================
-   INDIVIDUAL LETTER ANIMATION
+   LETTER ANIMATION
 ========================================= */
 
 .heading-line {
@@ -168,7 +168,6 @@
 
   overflow: visible;
 }
-
 
 .heading-letter {
 
@@ -198,18 +197,15 @@
     transform 0.25s ease;
 }
 
-
 .heading-line-one .heading-letter {
 
   color: #092c4c;
 }
 
-
 .heading-line-two .heading-letter {
 
   color: #00a6df;
 }
-
 
 .heading-letter:hover {
 
@@ -221,6 +217,10 @@
     rotateZ(-3deg);
 }
 
+.heading-letter.space {
+
+  width: 0.25em;
+}
 
 @keyframes letterJump {
 
@@ -235,7 +235,6 @@
       scale(0.7);
   }
 
-
   45% {
 
     opacity: 1;
@@ -247,7 +246,6 @@
       scale(1.08);
   }
 
-
   65% {
 
     transform:
@@ -257,7 +255,6 @@
       scale(0.98);
   }
 
-
   82% {
 
     transform:
@@ -266,7 +263,6 @@
       rotateZ(-1deg)
       scale(1.02);
   }
-
 
   100% {
 
@@ -279,12 +275,6 @@
       scale(1);
   }
 
-}
-
-
-.heading-letter.space {
-
-  width: 0.25em;
 }
 
 
@@ -305,7 +295,6 @@
   margin-top: 25px;
 }
 
-
 .heading-decoration span {
 
   display: block;
@@ -320,24 +309,26 @@
     decorationPulse 2s ease-in-out infinite;
 }
 
-
 .heading-decoration span:nth-child(1) {
+
   width: 15px;
+
   animation-delay: 0s;
 }
 
-
 .heading-decoration span:nth-child(2) {
+
   width: 65px;
+
   animation-delay: 0.2s;
 }
 
-
 .heading-decoration span:nth-child(3) {
+
   width: 15px;
+
   animation-delay: 0.4s;
 }
-
 
 @keyframes decorationPulse {
 
@@ -359,6 +350,8 @@
 
 .hero-content {
 
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -379,13 +372,17 @@
 
   position: relative;
 
+  width: 100%;
+
   min-height: 720px;
 
-  display:block;
+  display: flex;
 
   justify-content: center;
 
   align-items: center;
+
+  box-sizing: border-box;
 }
 
 
@@ -417,24 +414,23 @@
     glowPulse 4s ease-in-out infinite;
 
   z-index: 0;
-}
 
+  pointer-events: none;
+}
 
 @keyframes glowPulse {
 
   0%,
   100% {
 
-    transform:
-      scale(0.85);
+    transform: scale(0.85);
 
     opacity: 0.6;
   }
 
   50% {
 
-    transform:
-      scale(1.15);
+    transform: scale(1.15);
 
     opacity: 1;
   }
@@ -466,8 +462,9 @@
 
   animation:
     circlePulse 5s ease-in-out infinite;
-}
 
+  pointer-events: none;
+}
 
 @keyframes circlePulse {
 
@@ -496,8 +493,9 @@
     rgba(0, 171, 228, 0.35);
 
   border-radius: 50%;
-}
 
+  pointer-events: none;
+}
 
 .orbit-one {
 
@@ -512,7 +510,6 @@
     orbitRotate 12s linear infinite;
 }
 
-
 .orbit-two {
 
   width: 520px;
@@ -526,7 +523,6 @@
     orbitRotateReverse 10s linear infinite;
 }
 
-
 @keyframes orbitRotate {
 
   from {
@@ -538,7 +534,6 @@
   }
 
 }
-
 
 @keyframes orbitRotateReverse {
 
@@ -565,13 +560,13 @@
 
   height: 700px;
 
-  position:relative;
+  position: relative;
 
   z-index: 2;
 
   border-radius: 40px;
 
-  object-fit:fill;
+  object-fit: cover;
 
   box-shadow:
     0 30px 70px
@@ -584,7 +579,6 @@
   animation:
     imageReveal 1.4s ease forwards;
 }
-
 
 @keyframes imageReveal {
 
@@ -608,7 +602,6 @@
 
 }
 
-
 .main-image:hover {
 
   transform:
@@ -629,7 +622,7 @@
 
   position: absolute;
 
-  z-index: 5;
+  z-index: 6;
 
   display: flex;
 
@@ -638,6 +631,8 @@
   gap: 10px;
 
   padding: 13px 18px;
+
+  min-width: 145px;
 
   border-radius: 18px;
 
@@ -653,20 +648,22 @@
 
   animation:
     floatingBadge 3.5s ease-in-out infinite;
-}
 
+  box-sizing: border-box;
+
+  white-space: nowrap;
+}
 
 .badge-one {
 
   top: 12%;
 
-  left: -20px;
+  left: 0;
 }
-
 
 .badge-two {
 
-  right: -20px;
+  right: 0;
 
   bottom: 12%;
 
@@ -674,12 +671,13 @@
     1.5s;
 }
 
-
 .badge-icon {
 
   width: 42px;
 
   height: 42px;
+
+  min-width: 42px;
 
   border-radius: 13px;
 
@@ -695,7 +693,6 @@
   font-size: 21px;
 }
 
-
 .floating-badge strong {
 
   display: block;
@@ -705,14 +702,14 @@
   font-size: 13px;
 }
 
-
 .floating-badge small {
+
+  display: block;
 
   color: #718492;
 
   font-size: 10px;
 }
-
 
 @keyframes floatingBadge {
 
@@ -752,12 +749,13 @@
 
   opacity: 0.7;
 
-  z-index: 3;
+  z-index: 4;
 
   animation:
     particleFloat 4s ease-in-out infinite;
-}
 
+  pointer-events: none;
+}
 
 .particle-one {
 
@@ -765,7 +763,6 @@
 
   left: 15%;
 }
-
 
 .particle-two {
 
@@ -776,7 +773,6 @@
   animation-delay: 1s;
 }
 
-
 .particle-three {
 
   bottom: 20%;
@@ -786,7 +782,6 @@
   animation-delay: 2s;
 }
 
-
 .particle-four {
 
   bottom: 15%;
@@ -795,7 +790,6 @@
 
   animation-delay: 3s;
 }
-
 
 @keyframes particleFloat {
 
@@ -823,12 +817,15 @@
 
 .hero-text {
 
+  width: 100%;
+
   padding: 10px;
+
+  box-sizing: border-box;
 
   animation:
     contentReveal 1.2s ease 0.5s both;
 }
-
 
 @keyframes contentReveal {
 
@@ -880,8 +877,11 @@
   letter-spacing: 1.3px;
 
   margin-bottom: 20px;
-}
 
+  max-width: 100%;
+
+  box-sizing: border-box;
+}
 
 .intro-star {
 
@@ -890,7 +890,6 @@
   animation:
     starSpin 3s linear infinite;
 }
-
 
 @keyframes starSpin {
 
@@ -923,10 +922,9 @@
   font-weight:
     800;
 
-  margin-bottom:
-    25px;
+  margin:
+    0 0 25px;
 }
-
 
 .hero-text h2 span {
 
@@ -950,8 +948,8 @@
   line-height:
     1.8;
 
-  margin-bottom:
-    14px;
+  margin:
+    0 0 14px;
 }
 
 
@@ -970,6 +968,8 @@
   align-items:
     center;
 
+  flex-wrap: wrap;
+
   margin-top:
     24px;
 
@@ -979,7 +979,6 @@
   color:
     #092c4c;
 }
-
 
 .ecosystem strong {
 
@@ -1005,8 +1004,9 @@
 
   margin-top:
     30px;
-}
 
+  width: 100%;
+}
 
 .mission-card {
 
@@ -1018,6 +1018,9 @@
 
   align-items:
     center;
+
+  width:
+    100%;
 
   padding:
     17px 20px;
@@ -1042,11 +1045,13 @@
   overflow:
     hidden;
 
+  box-sizing:
+    border-box;
+
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
 }
-
 
 .mission-card::before {
 
@@ -1078,7 +1083,6 @@
     transform 0.4s ease;
 }
 
-
 .mission-card:hover {
 
   transform:
@@ -1088,7 +1092,6 @@
     0 18px 40px
     rgba(0,119,182,0.16);
 }
-
 
 .mission-card:hover::before {
 
@@ -1128,7 +1131,6 @@
     18px;
 }
 
-
 .rotating-ring {
 
   position:
@@ -1148,7 +1150,6 @@
     ringSpin 5s linear infinite;
 }
 
-
 @keyframes ringSpin {
 
   from {
@@ -1160,7 +1161,6 @@
   }
 
 }
-
 
 .icon-core {
 
@@ -1202,7 +1202,6 @@
     );
 }
 
-
 .learn-card .icon-core {
 
   background:
@@ -1228,8 +1227,10 @@
 
   flex:
     1;
-}
 
+  min-width:
+    0;
+}
 
 .mission-label {
 
@@ -1249,7 +1250,6 @@
     3px;
 }
 
-
 .mission-content strong {
 
   color:
@@ -1262,7 +1262,6 @@
     3px;
 }
 
-
 .mission-content small {
 
   color:
@@ -1272,7 +1271,6 @@
     12px;
 }
 
-
 .mission-arrow {
 
   color:
@@ -1281,10 +1279,12 @@
   font-size:
     28px;
 
+  flex-shrink:
+    0;
+
   transition:
     transform 0.3s ease;
 }
-
 
 .mission-card:hover .mission-arrow {
 
@@ -1330,8 +1330,10 @@
   box-shadow:
     0 15px 40px
     rgba(0,70,110,0.06);
-}
 
+  box-sizing:
+    border-box;
+}
 
 .vision-item {
 
@@ -1346,8 +1348,10 @@
 
   flex:
     1;
-}
 
+  min-width:
+    0;
+}
 
 .vision-number {
 
@@ -1364,13 +1368,15 @@
     800;
 }
 
-
 .vision-icon {
 
   width:
     48px;
 
   height:
+    48px;
+
+  min-width:
     48px;
 
   display:
@@ -1399,14 +1405,12 @@
     transform 0.4s ease;
 }
 
-
 .vision-item:hover .vision-icon {
 
   transform:
     translateY(-8px)
     rotate(8deg);
 }
-
 
 .vision-item strong {
 
@@ -1420,7 +1424,6 @@
     18px;
 }
 
-
 .vision-item p {
 
   margin:
@@ -1432,7 +1435,6 @@
   font-size:
     11px;
 }
-
 
 .vision-divider {
 
@@ -1465,7 +1467,6 @@
       5%;
   }
 
-
   .hero-content {
 
     grid-template-columns:
@@ -1475,23 +1476,56 @@
       40px;
   }
 
-
   .hero-image {
 
     min-height:
       600px;
   }
 
-
   .main-image {
 
-    max-width:
-      600px;
+    width:
+      min(100%, 600px);
 
     height:
       600px;
   }
 
+  .image-background-circle {
+
+    width:
+      500px;
+
+    height:
+      500px;
+  }
+
+  .image-glow {
+
+    width:
+      470px;
+
+    height:
+      470px;
+  }
+
+  .orbit-one {
+
+    width:
+      550px;
+
+    height:
+      350px;
+  }
+
+  .orbit-two {
+
+    width:
+      470px;
+
+    height:
+      310px;
+  }
 
   .hero-text {
 
@@ -1502,7 +1536,6 @@
       auto;
   }
 
-
   .vision-section {
 
     margin-left:
@@ -1511,7 +1544,6 @@
     margin-right:
       5%;
   }
-
 }
 
 
@@ -1527,6 +1559,11 @@
       43px;
   }
 
+  .announcement-track {
+
+    animation-duration:
+      25s;
+  }
 
   .announcement-track span {
 
@@ -1537,20 +1574,17 @@
       0 25px;
   }
 
-
   .hero-section {
 
     padding:
-      45px 20px 20px;
+      40px 16px 20px;
   }
-
 
   .hero-heading {
 
     margin-bottom:
-      40px;
+      35px;
   }
-
 
   .main-heading {
 
@@ -1561,7 +1595,6 @@
       -1px;
   }
 
-
   .heading-letter {
 
     transform:
@@ -1571,28 +1604,40 @@
   }
 
 
+  /* IMAGE */
+
   .hero-image {
 
-    min-height:
-      420px;
-  }
+    width:
+      100%;
 
+    min-height:
+      460px;
+
+    overflow:
+      visible;
+
+    margin:
+      0 auto;
+  }
 
   .main-image {
 
     width:
       100%;
 
-    height:
-      420px;
-
     max-width:
       500px;
 
+    height:
+      440px;
+
     border-radius:
       25px;
-  }
 
+    object-fit:
+      cover;
+  }
 
   .image-background-circle {
 
@@ -1603,7 +1648,6 @@
       360px;
   }
 
-
   .image-glow {
 
     width:
@@ -1613,168 +1657,254 @@
       350px;
   }
 
-
   .orbit-one {
 
     width:
-      400px;
+      430px;
 
     height:
-      260px;
+      280px;
   }
-
 
   .orbit-two {
 
     width:
-      370px;
+      390px;
 
     height:
-      240px;
+      250px;
   }
 
+
+  /* BADGES */
+
+  .floating-badge {
+
+    display:
+      flex;
+
+    min-width:
+      135px;
+
+    padding:
+      8px 10px;
+
+    gap:
+      7px;
+
+    border-radius:
+      13px;
+
+    z-index:
+      10;
+  }
 
   .badge-one {
 
     left:
-      0;
-  }
+      3%;
 
+    top:
+      10%;
+  }
 
   .badge-two {
 
     right:
-      0;
+      3%;
+
+    bottom:
+      10%;
   }
-
-
-  .floating-badge {
-
-    padding:
-      8px 11px;
-  }
-
-
-  .floating-badge strong {
-
-    font-size:
-      11px;
-  }
-
-
-  .floating-badge small {
-
-    font-size:
-      9px;
-  }
-
 
   .badge-icon {
 
     width:
-      33px;
+      32px;
 
     height:
-      33px;
-
-    font-size:
-      17px;
-  }
-
-
-  .hero-text h2 {
-
-    font-size:
-      30px;
-  }
-
-
-  .hero-text p {
-
-    font-size:
-      15px;
-  }
-
-
-  .ecosystem {
-
-    font-size:
-      18px;
-  }
-
-
-  .mission-card {
-
-    padding:
-      13px;
-  }
-
-
-  .mission-icon {
-
-    width:
-      55px;
-
-    height:
-      55px;
+      32px;
 
     min-width:
-      55px;
+      32px;
 
-    margin-right:
-      12px;
-  }
-
-
-  .icon-core {
-
-    width:
-      38px;
-
-    height:
-      38px;
+    border-radius:
+      9px;
 
     font-size:
-      19px;
+      16px;
   }
 
-
-  .mission-content strong {
-
-    font-size:
-      15px;
-  }
-
-
-  .mission-content small {
+  .floating-badge strong {
 
     font-size:
       10px;
   }
 
+  .floating-badge small {
+
+    font-size:
+      8px;
+  }
+
+
+  /* RIGHT CONTENT */
+
+  .hero-text {
+
+    width:
+      100%;
+
+    padding:
+      5px;
+
+    text-align:
+      left;
+  }
+
+  .intro-badge {
+
+    font-size:
+      8px;
+
+    letter-spacing:
+      1px;
+
+    padding:
+      7px 11px;
+  }
+
+  .hero-text h2 {
+
+    font-size:
+      30px;
+
+    line-height:
+      1.2;
+
+    margin-bottom:
+      20px;
+  }
+
+  .hero-text p {
+
+    font-size:
+      15px;
+
+    line-height:
+      1.7;
+  }
+
+  .ecosystem {
+
+    font-size:
+      18px;
+
+    margin-top:
+      20px;
+  }
+
+
+  /* MISSION CARDS */
+
+  .mission-links {
+
+    margin-top:
+      25px;
+
+    gap:
+      12px;
+  }
+
+  .mission-card {
+
+    padding:
+      12px;
+
+    border-radius:
+      16px;
+  }
+
+  .mission-icon {
+
+    width:
+      52px;
+
+    height:
+      52px;
+
+    min-width:
+      52px;
+
+    margin-right:
+      10px;
+  }
+
+  .icon-core {
+
+    width:
+      36px;
+
+    height:
+      36px;
+
+    font-size:
+      17px;
+  }
+
+  .mission-label {
+
+    font-size:
+      8px;
+
+    letter-spacing:
+      1.2px;
+  }
+
+  .mission-content strong {
+
+    font-size:
+      14px;
+  }
+
+  .mission-content small {
+
+    font-size:
+      9px;
+  }
+
+  .mission-arrow {
+
+    font-size:
+      22px;
+  }
+
+
+  /* VISION */
 
   .vision-section {
 
     flex-direction:
       column;
 
+    align-items:
+      stretch;
+
     gap:
       20px;
 
     margin:
-      45px 20px;
+      45px 16px;
 
     padding:
-      28px 20px;
+      25px 18px;
   }
-
 
   .vision-item {
 
     width:
       100%;
   }
-
 
   .vision-divider {
 
@@ -1785,9 +1915,8 @@
       1px;
 
     margin:
-      0;
+      0 auto;
   }
-
 }
 
 
@@ -1797,36 +1926,56 @@
 
 @media (max-width: 480px) {
 
+  .hero-section {
+
+    padding:
+      30px 12px 15px;
+  }
+
   .main-heading {
 
     font-size:
-      30px;
+      29px;
+
+    line-height:
+      1.15;
   }
 
+  .hero-heading {
+
+    margin-bottom:
+      28px;
+  }
+
+
+  /* IMAGE */
 
   .hero-image {
 
     min-height:
-      310px;
+      350px;
   }
-
 
   .main-image {
 
-    height:
-      310px;
-  }
+    width:
+      100%;
 
+    height:
+      330px;
+
+    border-radius:
+      20px;
+  }
 
   .image-background-circle {
 
     width:
-      270px;
+      280px;
 
     height:
-      270px;
+      280px;
   }
-
 
   .image-glow {
 
@@ -1837,7 +1986,6 @@
       270px;
   }
 
-
   .orbit-one,
   .orbit-two {
 
@@ -1846,40 +1994,294 @@
   }
 
 
+  /* BADGES */
+
   .floating-badge {
 
-    display:
-      none;
+    min-width:
+      120px;
+
+    max-width:
+      135px;
+
+    padding:
+      7px 8px;
+
+    gap:
+      6px;
+
+    border-radius:
+      11px;
+  }
+
+  .badge-one {
+
+    left:
+      2%;
+
+    top:
+      8%;
+  }
+
+  .badge-two {
+
+    right:
+      2%;
+
+    bottom:
+      8%;
+  }
+
+  .badge-icon {
+
+    width:
+      28px;
+
+    height:
+      28px;
+
+    min-width:
+      28px;
+
+    font-size:
+      14px;
+  }
+
+  .floating-badge strong {
+
+    font-size:
+      9px;
+  }
+
+  .floating-badge small {
+
+    font-size:
+      7px;
   }
 
 
+  /* CONTENT */
+
   .intro-badge {
+
+    font-size:
+      7px;
+
+    max-width:
+      100%;
+
+    white-space:
+      normal;
+  }
+
+  .hero-text h2 {
+
+    font-size:
+      26px;
+
+    line-height:
+      1.2;
+  }
+
+  .hero-text p {
+
+    font-size:
+      14px;
+
+    line-height:
+      1.65;
+  }
+
+  .ecosystem {
+
+    font-size:
+      16px;
+  }
+
+
+  /* MISSION CARDS */
+
+  .mission-card {
+
+    padding:
+      10px;
+  }
+
+  .mission-icon {
+
+    width:
+      46px;
+
+    height:
+      46px;
+
+    min-width:
+      46px;
+
+    margin-right:
+      8px;
+  }
+
+  .icon-core {
+
+    width:
+      32px;
+
+    height:
+      32px;
+
+    font-size:
+      15px;
+  }
+
+  .mission-content strong {
+
+    font-size:
+      13px;
+
+    line-height:
+      1.2;
+  }
+
+  .mission-content small {
+
+    display:
+      block;
+
+    font-size:
+      8px;
+
+    line-height:
+      1.3;
+  }
+
+  .mission-arrow {
+
+    font-size:
+      19px;
+  }
+
+
+  /* VISION */
+
+  .vision-section {
+
+    margin:
+      35px 12px;
+
+    padding:
+      22px 15px;
+  }
+
+  .vision-item {
+
+    gap:
+      10px;
+  }
+
+  .vision-icon {
+
+    width:
+      42px;
+
+    height:
+      42px;
+
+    min-width:
+      42px;
+
+    font-size:
+      18px;
+  }
+
+  .vision-item strong {
+
+    font-size:
+      16px;
+  }
+
+  .vision-item p {
+
+    font-size:
+      10px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+  .main-heading {
+
+    font-size:
+      26px;
+  }
+
+  .hero-image {
+
+    min-height:
+      320px;
+  }
+
+  .main-image {
+
+    height:
+      300px;
+  }
+
+  .floating-badge {
+
+    min-width:
+      105px;
+
+    max-width:
+      115px;
+
+    padding:
+      6px;
+  }
+
+  .badge-icon {
+
+    width:
+      25px;
+
+    height:
+      25px;
+
+    min-width:
+      25px;
+
+    font-size:
+      12px;
+  }
+
+  .floating-badge strong {
 
     font-size:
       8px;
   }
 
-
-  .hero-text h2 {
+  .floating-badge small {
 
     font-size:
-      27px;
+      6px;
   }
 
+  .mission-content strong {
+
+    font-size:
+      12px;
+  }
 
   .mission-content small {
 
     display:
       none;
   }
-
-
-  .mission-arrow {
-
-    font-size:
-      22px;
-  }
-
 }
 
 
@@ -1902,48 +2304,4 @@
     transition-duration:
       0.01ms !important;
   }
-
-}
-
-
-/* =========================================
-   MOBILE - TECHNOLOGY & TALENT BADGES
-========================================= */
-
-@media (max-width: 768px) {
-
-  .hero-image {
-    position: relative;
-    width: 100%;
-    min-height: 380px;
-    overflow: visible !important;
-  }
-
-  .main-image {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .floating-badge {
-    display: flex !important;
-    position: absolute;
-    z-index: 10;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  /* Technology badge */
-  .badge-one {
-    left: 5%;
-    bottom: 12%;
-  }
-
-  /* Talent badge */
-  .badge-two {
-    right: 5%;
-    top: 12%;
-  }
-
 }
