@@ -23,3 +23,7 @@ export const routes: Routes = [
 
 
 ];
+export const routerOptions = {
+  scrollPositionRestoration: 'top',
+  anchorScrolling: 'enabled'
+};

@@ -370,7 +370,7 @@
 
 .hero-image {
 
-  position: relative;
+  position:relative;
 
   width: 100%;
 
@@ -566,7 +566,7 @@
 
   border-radius: 40px;
 
-  object-fit: cover;
+  object-fit:fill;
 
   box-shadow:
     0 30px 70px

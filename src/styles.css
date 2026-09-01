@@ -1,6 +1,157 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
-/* Soft gradient background for the entire webpage */
+/* @import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+
+/* =========================================
+   GLOBAL DOCUMENT
+========================================= */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scroll-behavior: auto;
+}
+
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: linear-gradient(
+    to bottom,
+    #e0f7fa,
+    #ffffff
+  );
+
+  font-family: Arial, sans-serif;
+
+  color: #333;
+}
+
+
+/* =========================================
+   ANGULAR ROOT
+========================================= */
+
+app-root {
+  display: block;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   IMAGES
+========================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================
+   BOOTSTRAP ROW FIX
+========================================= */
+
+.row {
+  max-width: 100%;
+}
+
+
+/* =========================================
+   GRADIENT CLASSES
+========================================= */
+
+.bg-gradient-primary {
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  );
+}
+
+.bg-gradient-success {
+  background: linear-gradient(
+    135deg,
+    #00b09b,
+    #96c93d
+  );
+}
+
+.bg-gradient-info {
+  background: linear-gradient(
+    135deg,
+    #56ccf2,
+    #2f80ed
+  );
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(
+    135deg,
+    #f7971e,
+    #ffd200
+  );
+}
+
+.bg-gradient-danger {
+  background: linear-gradient(
+    135deg,
+    #f857a6,
+    #ff5858
+  );
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(
+    135deg,
+    #2c3e50,
+    #4ca1af
+  );
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body,
+  app-root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+  }
+}Soft gradient background for the entire webpage */
 body {
     background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Light gray to white gradient */
     font-family: Arial, sans-serif;
