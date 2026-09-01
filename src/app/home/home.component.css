@@ -1904,3 +1904,46 @@
   }
 
 }
+
+
+/* =========================================
+   MOBILE - TECHNOLOGY & TALENT BADGES
+========================================= */
+
+@media (max-width: 768px) {
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    overflow: visible !important;
+  }
+
+  .main-image {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .floating-badge {
+    display: flex !important;
+    position: absolute;
+    z-index: 10;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Technology badge */
+  .badge-one {
+    left: 5%;
+    bottom: 12%;
+  }
+
+  /* Talent badge */
+  .badge-two {
+    right: 5%;
+    top: 12%;
+  }
+
+}

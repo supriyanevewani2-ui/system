@@ -1,15 +1,161 @@
-<nav class="navbar">
-  <div class="logo">
-    <img src="/assets/skylonsys-logo.png" alt="SkylonSys Logo">
+<nav class="skylon-navbar">
+
+  <div class="navbar-container">
+
+    <!-- =========================================
+         LOGO
+    ========================================== -->
+
+    <a routerLink="/" class="brand-logo">
+
+      <div class="logo-mark">
+        <span class="logo-shape shape-1"></span>
+        <span class="logo-shape shape-2"></span>
+        <span class="logo-shape shape-3"></span>
+
+        <i class="fas fa-bolt logo-bolt"></i>
+      </div>
+
+      <div class="brand-name">
+        Skylon<span>Sys</span>
+      </div>
+
+    </a>
+
+
+    <!-- =========================================
+         DESKTOP NAVIGATION
+    ========================================== -->
+
+    <div class="desktop-navigation">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link">
+
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+
+      </a>
+
+
+      <a
+        routerLink="/servicess"
+        routerLinkActive="active"
+        class="nav-link">
+
+        <i class="fas fa-cogs"></i>
+        <span>Services</span>
+
+      </a>
+
+
+      <a
+        routerLink="/coursess"
+        routerLinkActive="active"
+        class="nav-link">
+
+        <i class="fas fa-graduation-cap"></i>
+        <span>Courses</span>
+
+      </a>
+
+
+      <a
+        routerLink="/contactus"
+        routerLinkActive="active"
+        class="nav-link">
+
+        <i class="fas fa-envelope"></i>
+        <span>Contact Us</span>
+
+      </a>
+
+    </div>
+
+
+    <!-- =========================================
+         MOBILE MENU BUTTON
+    ========================================== -->
+
+    <button
+      class="mobile-menu-button"
+      type="button"
+      aria-label="Open navigation menu">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <!-- =========================================
+         MOBILE NAVIGATION
+    ========================================== -->
+
+    <div class="mobile-navigation">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="mobile-nav-link">
+
+        <span class="mobile-icon">
+          <i class="fas fa-home"></i>
+        </span>
+
+        <span>Home</span>
+
+      </a>
+
+
+      <a
+        routerLink="/services"
+        routerLinkActive="active"
+        class="mobile-nav-link">
+
+        <span class="mobile-icon">
+          <i class="fas fa-cogs"></i>
+        </span>
+
+        <span>Services</span>
+
+      </a>
+
+
+      <a
+        routerLink="/courses"
+        routerLinkActive="active"
+        class="mobile-nav-link">
+
+        <span class="mobile-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </span>
+
+        <span>Courses</span>
+
+      </a>
+
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="active"
+        class="mobile-nav-link">
+
+        <span class="mobile-icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+
+        <span>Contact Us</span>
+
+      </a>
+
+    </div>
+
   </div>
-  <ul class="nav-links">
-    <li><a routerLink="/" data-tooltip="Go to Home" routerLinkActive="active" class="nav-item">Home</a></li>
-    <li><a routerLink="/services" data-tooltip="Explore Services" routerLinkActive="active" class="nav-item">Services</a></li>
-    <li><a routerLink="/courses" data-tooltip="View Courses" routerLinkActive="active" class="nav-item">Courses</a></li>
-    <li><a routerLink="/about" data-tooltip="Learn About Us" routerLinkActive="active" class="nav-item">About Us</a></li>
-    <li><a routerLink="/contact" data-tooltip="Get in Touch" routerLinkActive="active" class="nav-item">Contact</a></li>
-    <li><a routerLink="/coursess" data-tooltip="See More Courses" routerLinkActive="active" class="nav-item">Coursess</a></li>
-    <li><a routerLink="/servicess" data-tooltip="More Services" routerLinkActive="active" class="nav-item">Servicess</a></li>
-    <li><a routerLink="/contactus" data-tooltip="Contact Us" routerLinkActive="active" class="nav-item">Contact-Us</a></li>
-  </ul>
+
 </nav>
