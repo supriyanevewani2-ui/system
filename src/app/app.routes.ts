@@ -12,13 +12,13 @@ import { ContactusComponent } from './contactus/contactus.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
 
-  { path: 'services', component: ServicesComponent },
+  { path: 'servicessss', component: ServicesComponent },
   { path: 'services/:id', component: ServiceDetailComponent },
-  { path: 'courses', component: CoursesComponent },
+  { path: 'coursessss', component: CoursesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  {path:'coursess',component:CoursessComponent},
-  { path: 'servicess', component: ServicessComponent },
+  {path:'courses',component:CoursessComponent},
+  { path: 'services', component: ServicessComponent },
   { path: 'contactus', component: ContactusComponent }
 
 
