@@ -49,24 +49,16 @@
 
         <span class="heading-line heading-line-one">
 
-          @for (letter of lineOne; track $index) {
+          @for (word of lineOneWords; track $index) {
 
-            @if (letter === ' ') {
+            <span
+              class="heading-word"
+              [style.animation-delay.ms]="$index * 90">
+              {{ word }}
+            </span>
 
-              <span
-                class="heading-letter space"
-                [style.animation-delay.ms]="$index * 35">
-                &nbsp;
-              </span>
-
-            } @else {
-
-              <span
-                class="heading-letter"
-                [style.animation-delay.ms]="$index * 35">
-                {{ letter }}
-              </span>
-
+            @if (!$last) {
+              <span class="heading-space">&nbsp;</span>
             }
 
           }
@@ -78,24 +70,16 @@
 
         <span class="heading-line heading-line-two">
 
-          @for (letter of lineTwo; track $index) {
+          @for (word of lineTwoWords; track $index) {
 
-            @if (letter === ' ') {
+            <span
+              class="heading-word"
+              [style.animation-delay.ms]="700 + ($index * 90)">
+              {{ word }}
+            </span>
 
-              <span
-                class="heading-letter space"
-                [style.animation-delay.ms]="800 + ($index * 35)">
-                &nbsp;
-              </span>
-
-            } @else {
-
-              <span
-                class="heading-letter"
-                [style.animation-delay.ms]="800 + ($index * 35)">
-                {{ letter }}
-              </span>
-
+            @if (!$last) {
+              <span class="heading-space">&nbsp;</span>
             }
 
           }
@@ -275,7 +259,7 @@
           <!-- TECHNOLOGY -->
 
           <a
-            routerLink="/servicess"
+            routerLink="/services"
             class="mission-card build-card">
 
             <div class="mission-icon">
@@ -317,7 +301,7 @@
           <!-- TALENT -->
 
           <a
-            routerLink="/coursess"
+            routerLink="/courses"
             class="mission-card learn-card">
 
             <div class="mission-icon">
