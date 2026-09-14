@@ -78,29 +78,33 @@
          MOBILE MENU BUTTON
     ========================================== -->
 
-    <button
-      class="mobile-menu-button"
-      type="button"
-      aria-label="Open navigation menu">
+ <button
+  class="mobile-menu-button"
+  type="button"
+  aria-label="Open navigation menu"
+  (click)="toggleMobileMenu()"
+  [class.open]="isMobileMenuOpen">
 
-      <span></span>
-      <span></span>
-      <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
 
-    </button>
+</button>
 
 
     <!-- =========================================
          MOBILE NAVIGATION
     ========================================== -->
 
-    <div class="mobile-navigation">
-
+<div
+  class="mobile-navigation"
+  [class.open]="isMobileMenuOpen">
       <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="mobile-nav-link">
+  routerLink="/"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="mobile-nav-link"
+  (click)="closeMobileMenu()">
 
         <span class="mobile-icon">
           <i class="fas fa-home"></i>
@@ -112,9 +116,10 @@
 
 
       <a
-        routerLink="/servicess"
-        routerLinkActive="active"
-        class="mobile-nav-link">
+  routerLink="/servicess"
+  routerLinkActive="active"
+  class="mobile-nav-link"
+  (click)="closeMobileMenu()">
 
         <span class="mobile-icon">
           <i class="fas fa-cogs"></i>
@@ -126,9 +131,10 @@
 
 
       <a
-        routerLink="/coursess"
-        routerLinkActive="active"
-        class="mobile-nav-link">
+  routerLink="/coursess"
+  routerLinkActive="active"
+  class="mobile-nav-link"
+  (click)="closeMobileMenu()">
 
         <span class="mobile-icon">
           <i class="fas fa-graduation-cap"></i>
@@ -140,10 +146,10 @@
 
 
       <a
-        routerLink="/contactus"
-        routerLinkActive="active"
-        class="mobile-nav-link">
-
+  routerLink="/contactus"
+  routerLinkActive="active"
+  class="mobile-nav-link"
+  (click)="closeMobileMenu()">
         <span class="mobile-icon">
           <i class="fas fa-envelope"></i>
         </span>

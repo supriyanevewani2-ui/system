@@ -479,10 +479,8 @@
    SHOW MOBILE MENU
 ===================================================== */
 
-.mobile-menu-button:hover + .mobile-navigation,
-.mobile-navigation:hover {
+.mobile-navigation.open {
   display: block;
-
   animation:
     mobileMenuIn 0.3s ease;
 }
@@ -713,18 +711,17 @@
 
 
   .logo-mark {
-    width: 45px;
+    width: 50px;
 
-    height: 45px;
+    height: 50px;
   }
 
 
-  .company-logo {
-    width: 45px;
-
-    height: 45px;
-  }
-
+.company-logo {
+  width: 230px;
+  height: 70px;
+  transform: translateX(0);
+}
 
   .desktop-navigation {
     display: none;
