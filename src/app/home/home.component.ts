@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
 
-  lineOne = Array.from("We don't just build software.");
-  lineTwo = Array.from("We build the people who build it.");
+  lineOne = Array.from("We don't just build software...");
+  lineTwo = Array.from("We build the people who build it!");
 
 }

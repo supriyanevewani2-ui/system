@@ -147,14 +147,14 @@
 
   color: #092c4c;
 
-  font-size:
-    clamp(40px, 5vw, 70px);
+    font-size: clamp(32px, 3.8vw, 52px);
+
 
   line-height: 1.1;
 
   font-weight: 800;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -1589,10 +1589,10 @@
   .main-heading {
 
     font-size:
-      36px;
+      30px;
 
     letter-spacing:
-      -1px;
+      -0.5px;
   }
 
   .heading-letter {
@@ -1935,10 +1935,10 @@
   .main-heading {
 
     font-size:
-      29px;
+      25px;
 
     line-height:
-      1.15;
+      1.2;
   }
 
   .hero-heading {
@@ -2217,7 +2217,7 @@
   .main-heading {
 
     font-size:
-      26px;
+      23px;
   }
 
   .hero-image {

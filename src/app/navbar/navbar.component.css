@@ -1,6 +1,7 @@
 
 /* =====================================================
    SKYlONSYS NAVBAR
+   WHITE → LIGHT BLUE → SKY BLUE → NAVY
 ===================================================== */
 
 .skylon-navbar {
@@ -14,17 +15,38 @@
 
   z-index: 9999;
 
+  /*
+    MAIN GRADIENT
+
+    White
+      ↓
+    Light Blue
+      ↓
+    Sky Blue
+      ↓
+    Deep Blue
+      ↓
+    Navy
+  */
+
   background:
     linear-gradient(
-      135deg,
-      rgba(5, 18, 35, 0.97),
-      rgba(8, 31, 53, 0.97)
+      110deg,
+      #ffffff 0%,
+      #f2fbff 12%,
+      #dff6ff 25%,
+      #a9e5f8 40%,
+      #55c2e8 55%,
+      #237ca8 70%,
+      #0c3d5d 85%,
+      #061a2d 100%
     );
 
-  border-bottom: 1px solid rgba(0, 171, 228, 0.18);
+  border-bottom:
+    1px solid rgba(0, 55, 90, 0.20);
 
   box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.18);
+    0 8px 30px rgba(0, 35, 65, 0.22);
 
   backdrop-filter: blur(15px);
 
@@ -38,6 +60,7 @@
 
 .navbar-container {
   width: 100%;
+
   max-width: 1400px;
 
   height: 100%;
@@ -55,7 +78,7 @@
 
 
 /* =====================================================
-   LOGO
+   COMPANY LOGO + BRAND
 ===================================================== */
 
 .brand-logo {
@@ -63,139 +86,87 @@
 
   align-items: center;
 
-  gap: 12px;
+  gap: 0px;
 
-  color: #ffffff;
+  color: #06243d;
 
   text-decoration: none;
 
   flex-shrink: 0;
 
-  transition: transform 0.35s ease;
+  transition:
+    transform 0.35s ease;
 }
 
 
 .brand-logo:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 
 /* =====================================================
-   LOGO MARK
+   LOGO CONTAINER
 ===================================================== */
 
 .logo-mark {
   position: relative;
 
-  width: 45px;
-  height: 45px;
+  width: 350px;
 
-  display: flex;
+  height: 150px;
+
+  display:flex;
 
   align-items: center;
-  justify-content: center;
 
-  border-radius: 13px;
+  justify-content:flex-start;
 
-  background:
-    linear-gradient(
-      135deg,
-      #00abe4,
-      #2575fc
-    );
+  flex-shrink: 0;
 
-  box-shadow:
-    0 5px 20px rgba(0, 171, 228, 0.35);
+  background: transparent;
 
-  overflow: hidden;
-
-  animation: logoPulse 3s ease-in-out infinite;
-}
-
-
-@keyframes logoPulse {
-
-  0%,
-  100% {
-    box-shadow:
-      0 5px 20px rgba(0, 171, 228, 0.30);
-  }
-
-  50% {
-    box-shadow:
-      0 5px 30px rgba(0, 171, 228, 0.65);
-  }
-
+  overflow: visible;
 }
 
 
 /* =====================================================
-   LOGO SHAPES
+   TRANSPARENT COMPANY LOGO
 ===================================================== */
 
-.logo-shape {
-  position: absolute;
+.company-logo {
+  width: 400px;
 
-  width: 27px;
-  height: 5px;
+  height: 120px;
 
-  border-radius: 20px;
+  object-fit: contain;
 
-  background: rgba(255, 255, 255, 0.85);
+  display: block;
 
-  transform: rotate(-45deg);
-}
+  max-width: none;
 
-
-.shape-1 {
-  transform:
-    translateY(-9px)
-    rotate(-45deg);
-}
-
-
-.shape-2 {
-  transform:
-    translateY(0)
-    rotate(-45deg);
-}
-
-
-.shape-3 {
-  transform:
-    translateY(9px)
-    rotate(-45deg);
-}
-
-
-.logo-bolt {
-  position: relative;
-
-  z-index: 2;
-
-  color: #ffffff;
-
-  font-size: 13px;
-
-  opacity: 0;
-
-  transform: scale(0);
+  max-height: none;
+  transform: translateX(-60px);
 
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
 
 
-.brand-logo:hover .logo-bolt {
-  opacity: 1;
+/* =====================================================
+   LOGO HOVER
+===================================================== */
 
-  transform: scale(1);
-}
+.brand-logo:hover .company-logo {
+    transform: translateX(-30px) scale(1.04);
 
 
-.brand-logo:hover .logo-shape {
-  opacity: 0.25;
+  filter:
+    drop-shadow(
+      0 5px 10px
+      rgba(0, 50, 80, 0.18)
+    );
 }
 
 
@@ -209,11 +180,15 @@
   font-weight: 800;
 
   letter-spacing: -0.5px;
+
+  white-space: nowrap;
+
+  color: #06243d;
 }
 
 
 .brand-name span {
-  color: #00abe4;
+  color: #007db5;
 }
 
 
@@ -227,6 +202,8 @@
   align-items: center;
 
   gap: 8px;
+    margin-left: auto;
+
 }
 
 
@@ -245,7 +222,7 @@
 
   padding: 12px 17px;
 
-  color: #b8c9d6;
+  color: #e7e8ea;
 
   text-decoration: none;
 
@@ -258,30 +235,48 @@
   transition:
     color 0.3s ease,
     background 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
+/* =====================================================
+   NAV ICON
+===================================================== */
+
 .nav-link i {
-  color: #00abe4;
+  color: #d3dbdf;
 
   font-size: 13px;
 
   transition:
-    transform 0.3s ease;
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
+
+/* =====================================================
+   NAV HOVER
+===================================================== */
 
 .nav-link:hover {
   color: #ffffff;
 
-  background: rgba(0, 171, 228, 0.09);
+  background:
+    rgba(4, 45, 72, 0.58);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 5px 15px
+    rgba(0, 40, 70, 0.16);
 }
 
 
 .nav-link:hover i {
+  color: #ffffff;
+
   transform:
     translateY(-2px)
     rotate(8deg);
@@ -289,7 +284,7 @@
 
 
 /* =====================================================
-   ACTIVE LINK
+   ACTIVE NAV LINK
 ===================================================== */
 
 .nav-link.active {
@@ -298,11 +293,24 @@
   background:
     linear-gradient(
       135deg,
-      rgba(0, 171, 228, 0.16),
-      rgba(37, 117, 252, 0.10)
+      rgba(5, 57, 88, 0.82),
+      rgba(5, 26, 45, 0.94)
     );
+
+  box-shadow:
+    0 5px 16px
+    rgba(0, 35, 65, 0.20);
 }
 
+
+.nav-link.active i {
+  color: #55d5ff;
+}
+
+
+/* =====================================================
+   ACTIVE UNDERLINE
+===================================================== */
 
 .nav-link.active::after {
   content: "";
@@ -310,6 +318,7 @@
   position: absolute;
 
   left: 18px;
+
   right: 18px;
 
   bottom: 4px;
@@ -325,40 +334,47 @@
       #2575fc
     );
 
-  animation: activeLine 0.4s ease;
+  animation:
+    activeLine 0.4s ease;
 }
 
 
 @keyframes activeLine {
 
   from {
-    transform: scaleX(0);
+    transform:
+      scaleX(0);
   }
 
   to {
-    transform: scaleX(1);
+    transform:
+      scaleX(1);
   }
 
 }
 
 
 /* =====================================================
-   MOBILE BUTTON
+   MOBILE MENU BUTTON
 ===================================================== */
 
 .mobile-menu-button {
   display: none;
 
   width: 46px;
+
   height: 46px;
 
   padding: 10px;
 
-  border: 1px solid rgba(0, 171, 228, 0.25);
+  border:
+    1px solid
+    rgba(0, 60, 95, 0.25);
 
   border-radius: 12px;
 
-  background: rgba(0, 171, 228, 0.08);
+  background:
+    rgba(255, 255, 255, 0.28);
 
   cursor: pointer;
 
@@ -369,22 +385,27 @@
   align-items: center;
 
   gap: 5px;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0, 40, 70, 0.12);
 }
 
 
 /* =====================================================
-   HAMBURGER LINES
+   MOBILE BUTTON LINES
 ===================================================== */
 
 .mobile-menu-button span {
   display: block;
 
   width: 23px;
+
   height: 2px;
 
   border-radius: 5px;
 
-  background: #ffffff;
+  background: #06243d;
 
   transition:
     transform 0.3s ease,
@@ -393,8 +414,13 @@
 }
 
 
+/* =====================================================
+   MOBILE BUTTON HOVER
+===================================================== */
+
 .mobile-menu-button:hover {
-  background: rgba(0, 171, 228, 0.18);
+  background:
+    rgba(255, 255, 255, 0.50);
 }
 
 
@@ -430,28 +456,35 @@
   background:
     linear-gradient(
       145deg,
-      rgba(7, 25, 43, 0.98),
-      rgba(5, 16, 30, 0.98)
+      #ffffff 0%,
+      #dff6ff 28%,
+      #2b91bd 65%,
+      #061a2d 100%
     );
 
-  border: 1px solid rgba(0, 171, 228, 0.20);
+  border:
+    1px solid
+    rgba(0, 65, 100, 0.25);
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.35);
+    0 20px 50px
+    rgba(0, 25, 50, 0.40);
 
-  backdrop-filter: blur(20px);
+  backdrop-filter:
+    blur(20px);
 }
 
 
 /* =====================================================
-   SHOW MOBILE MENU ON HOVER
+   SHOW MOBILE MENU
 ===================================================== */
 
 .mobile-menu-button:hover + .mobile-navigation,
 .mobile-navigation:hover {
   display: block;
 
-  animation: mobileMenuIn 0.3s ease;
+  animation:
+    mobileMenuIn 0.3s ease;
 }
 
 
@@ -493,7 +526,7 @@
 
   border-radius: 12px;
 
-  color: #b8c9d6;
+  color: #063452;
 
   text-decoration: none;
 
@@ -513,13 +546,18 @@
 }
 
 
+/* =====================================================
+   MOBILE LINK HOVER
+===================================================== */
+
 .mobile-nav-link:hover {
   color: #ffffff;
 
   background:
-    rgba(0, 171, 228, 0.12);
+    rgba(3, 47, 75, 0.60);
 
-  transform: translateX(5px);
+  transform:
+    translateX(5px);
 }
 
 
@@ -529,30 +567,39 @@
 
 .mobile-icon {
   width: 34px;
+
   height: 34px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 9px;
 
   background:
-    rgba(0, 171, 228, 0.10);
+    rgba(0, 125, 181, 0.12);
 
-  color: #00abe4;
+  color: #007db5;
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease;
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 
-.mobile-nav-link:hover .mobile-icon {
-  background: #00abe4;
+/* =====================================================
+   MOBILE ICON HOVER
+===================================================== */
 
-  color: #ffffff;
+.mobile-nav-link:hover .mobile-icon {
+  background:
+    #00abe4;
+
+  color:
+    #ffffff;
 
   transform:
     rotate(-5deg)
@@ -560,11 +607,28 @@
 }
 
 
+/* =====================================================
+   MOBILE ACTIVE
+===================================================== */
+
 .mobile-nav-link.active {
   color: #ffffff;
 
   background:
-    rgba(0, 171, 228, 0.13);
+    linear-gradient(
+      135deg,
+      rgba(4, 55, 85, 0.72),
+      rgba(5, 25, 43, 0.90)
+    );
+}
+
+
+.mobile-nav-link.active .mobile-icon {
+  background:
+    #00abe4;
+
+  color:
+    #ffffff;
 }
 
 
@@ -572,20 +636,41 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
   .navbar-container {
     padding: 0 22px;
   }
 
+
+  .logo-mark {
+    width: 205px;
+
+    height: 65px;
+  }
+
+
+  .company-logo {
+    width: 200px;
+
+    height: 62px;
+  }
+
+
   .desktop-navigation {
     gap: 2px;
   }
+
 
   .nav-link {
     padding: 10px 11px;
 
     font-size: 13px;
+  }
+
+
+  .brand-name {
+    font-size: 23px;
   }
 
 }
@@ -599,11 +684,26 @@
 
   .skylon-navbar {
     height: 68px;
+
+    background:
+      linear-gradient(
+        110deg,
+        #ffffff 0%,
+        #eaf8ff 25%,
+        #a9e5f8 50%,
+        #267fa8 75%,
+        #061a2d 100%
+      );
   }
 
 
   .navbar-container {
     padding: 0 15px;
+  }
+
+
+  .brand-logo {
+    gap: 7px;
   }
 
 
@@ -613,10 +713,16 @@
 
 
   .logo-mark {
-    width: 40px;
-    height: 40px;
+    width: 45px;
 
-    border-radius: 11px;
+    height: 45px;
+  }
+
+
+  .company-logo {
+    width: 45px;
+
+    height: 45px;
   }
 
 
@@ -649,13 +755,22 @@
 
 
   .logo-mark {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .company-logo {
+    width: 40px;
+
+    height: 40px;
   }
 
 
   .mobile-menu-button {
     width: 42px;
+
     height: 42px;
   }
 
@@ -663,7 +778,8 @@
   .mobile-navigation {
     right: 10px;
 
-    width: calc(100vw - 30px);
+    width:
+      calc(100vw - 30px);
 
     max-width: 230px;
   }
@@ -677,10 +793,13 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .logo-mark,
+  .company-logo,
   .mobile-navigation,
   .nav-link.active::after {
+
     animation: none;
+
+    transition: none;
   }
 
 }

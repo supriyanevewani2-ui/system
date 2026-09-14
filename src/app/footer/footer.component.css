@@ -197,7 +197,7 @@
 
 
 .logo-text span {
-  color: #00abe4;
+  color: #ffffff;
 }
 
 
@@ -208,7 +208,7 @@
 .footer-description {
   max-width: 390px;
 
-  color: #aebdca;
+  color: #e4e4e5;
 
   font-size: 14px;
 
@@ -336,7 +336,7 @@
 
   gap: 9px;
 
-  color: #aebdca;
+  color: #ffffff;
 
   font-size: 14px;
 
@@ -388,7 +388,7 @@
 
   gap: 12px;
 
-  color: #c3d0da;
+  color: #ffffff;
 
   font-size: 14px;
 
@@ -468,7 +468,7 @@
 
   gap: 12px;
 
-  color: #aebdca;
+  color: #ffffff;
 
   font-size: 13px;
 
@@ -554,7 +554,7 @@
 
   gap: 20px;
 
-  color: #7f929f;
+  color: #ffffff;
 
   font-size: 11px;
 }
