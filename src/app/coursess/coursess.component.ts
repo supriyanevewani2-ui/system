@@ -102,7 +102,37 @@ export class CoursessComponent {
       ]
     },
 
+ // =======================================================
+    // 11. INVESTMENT BANKING WITH AI
+    // =======================================================
 
+    {
+      title: 'Investment Banking with AI',
+
+      icon: 'fas fa-chart-line',
+
+      duration: '6 Months',
+
+      level: 'Advanced',
+
+      mode: 'Online / Offline',
+
+      description:
+        'Advanced Investment Banking program covering AI-powered financial analysis, Advanced Excel, Power BI, financial markets and instruments, banking operations, equity research, M&A and valuation strategies.',
+
+      technologies: [
+        'AI in Investment Banking',
+        'Advanced Excel',
+        'Power BI',
+        'Financial Markets',
+        'Financial Instruments',
+        'Banking Operations',
+        'Investment Banking',
+        'Equity Research',
+        'M&A',
+        'Valuation Strategies'
+      ]
+    },
     // =======================================================
     // 3. DATA ENGINEERING
     // =======================================================
@@ -349,6 +379,8 @@ export class CoursessComponent {
         'CI/CD'
       ]
     }
+    
+   
 
   ];
 

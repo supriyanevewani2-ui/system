@@ -8,9 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { CoursessComponent } from './coursess/coursess.component';
 import { ServicessComponent } from './servicess/servicess.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { HomenewComponent } from './homenew/homenew.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomenewComponent },
 
   { path: 'servicessss', component: ServicesComponent },
   { path: 'services/:id', component: ServiceDetailComponent },
@@ -19,7 +20,8 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   {path:'courses',component:CoursessComponent},
   { path: 'services', component: ServicessComponent },
-  { path: 'contactus', component: ContactusComponent }
+  { path: 'contactus', component: ContactusComponent },
+  
 
 
 ];
