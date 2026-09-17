@@ -11,7 +11,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomenewComponent } from './homenew/homenew.component';
 
 export const routes: Routes = [
-    { path: '', component: HomenewComponent },
+    { path: '', component: HomeComponent },
 
   { path: 'servicessss', component: ServicesComponent },
   { path: 'services/:id', component: ServiceDetailComponent },
