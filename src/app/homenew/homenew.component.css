@@ -117,7 +117,7 @@
   margin: auto;
 
   padding:
-    70px 6% 30px;
+    40px 6% 40px;
 
   box-sizing: border-box;
 }
@@ -133,7 +133,7 @@
 
   text-align: center;
 
-  margin-bottom: 55px;
+  margin-bottom: 30px;
 
   perspective: 1000px;
 }
@@ -569,10 +569,10 @@
 ========================================= */
 .tech-logo-section {
   /*width: calc(100% - 50px);*/
-  width:auto;
+  width:max-content;
   height: 100px;
 
-  margin-left:0%;
+  margin-left:-40%;
   margin-right:0%;
 
   position: relative;
@@ -644,10 +644,10 @@
 ========================================= */
 
 .tech-icon {
-  width: 82px;
-  height: 82px;
+  width: 60px;
+  height: 60px;
 
-  flex: 0 0 82px;
+  flex: 0 0 60px;
 
   display: flex;
   align-items: center;
@@ -663,7 +663,7 @@
 .tech-icon i {
   display: block;
 
-  font-size: 62px;
+  font-size: 42px;
   line-height: 1;
 
   position: relative;
@@ -694,7 +694,7 @@
 
   position: relative;
 
-  perspective: 600px;
+  perspective: 400px;
 }
 
 .tech-icon i {
@@ -754,23 +754,23 @@
 ========================================= */
 
 .tech-icon:nth-child(4n) i {
-  font-size: 70px;
+  font-size: 48px;
 }
 
 .tech-icon:nth-child(7n) i {
-  font-size: 55px;
+  font-size: 38px;
 }
 
 .tech-icon:nth-child(9n) i {
-  font-size: 66px;
+  font-size: 44px;
 }
 
 .tech-icon:nth-child(13n) i {
-  font-size: 74px;
+  font-size: 52px;
 }
 
 .tech-icon:nth-child(17n) i {
-  font-size: 58px;
+  font-size: 40px;
 }
 
 
@@ -822,24 +822,24 @@
 @media (max-width: 900px) {
 
   .tech-logo-section {
-    height: 105px;
+    height: 80px;
   }
 
   .tech-logo-track {
-    gap: 30px;
+    gap: 20px;
 
     animation-duration: 38s;
   }
 
   .tech-icon {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 
-    flex-basis: 70px;
+    flex-basis: 50px;
   }
 
   .tech-icon i {
-    font-size: 52px;
+    font-size: 34px;
   }
 
 }
@@ -852,24 +852,24 @@
 @media (max-width: 600px) {
 
   .tech-logo-section {
-    height: 90px;
+    height: 65px;
   }
 
   .tech-logo-track {
-    gap: 22px;
+    gap: 16px;
 
     animation-duration: 30s;
   }
 
   .tech-icon {
-    width: 58px;
-    height: 58px;
+    width: 40px;
+    height: 40px;
 
-    flex-basis: 58px;
+    flex-basis: 40px;
   }
 
   .tech-icon i {
-    font-size: 43px;
+    font-size: 26px;
   }
 
   .tech-logo-window {
@@ -916,7 +916,7 @@
 
   overflow: hidden;
 
-  padding: 22px 0 28px;
+  padding: 16px 0 20px;
 
   /* Fade logos smoothly at both edges */
   mask-image: linear-gradient(
@@ -947,7 +947,7 @@
 
   width: max-content;
 
-  gap: 55px;
+  gap: 36px;
 
   animation: technologyLogoMove 38s linear infinite;
 
@@ -962,7 +962,7 @@
 .technology-logo-track i {
   flex: 0 0 auto;
 
-  font-size: 48px;
+  font-size: 32px;
 
   line-height: 1;
 
@@ -1029,13 +1029,13 @@
   }
 
   .technology-logo-track {
-    gap: 38px;
+    gap: 24px;
 
     animation-duration: 30s;
   }
 
   .technology-logo-track i {
-    font-size: 38px;
+    font-size: 24px;
   }
 
 }
@@ -1818,7 +1818,7 @@
 ===================================================== */
 
 .what-we-do-section {
-    padding-top: 40px;
+    padding-top: 0px;
 
     padding-bottom: 40px;
 
@@ -1853,11 +1853,12 @@
 
 .flip-card {
 
-  height: 365px;
+  height: 400px;
 
   perspective: 1200px;
 
   outline: none;
+  
 
   cursor: pointer;
 }
@@ -1888,12 +1889,12 @@
 }
 
 
-/* FRONT + BACK */
+/* FRONT + BACK 
 
 .flip-card-front,
 .flip-card-back {
 
-  position: absolute;
+  position:absolute;
 
   inset: 0;
 
@@ -1913,30 +1914,32 @@
 /* =====================================================
    FRONT
 ===================================================== */
-
 .flip-card-front {
-
   padding: 30px;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 
-  background:
-    rgba(255,255,255,0.95);
+  /* Your original background layers: */
+  /* Layer 1: The 4px light-to-dark blue gradient line anchored to the top */
+  /* Layer 2: Your original white background fill covering the rest */
+  background: 
+     linear-gradient(
+      90deg,
+      #1e88e5,
+      #00e5ff
+    ) top / 100% 4px no-repeat,
+    rgba(255, 255, 255, 0.95);
 
-  border:
-    1px solid
-    rgba(0,171,228,0.14);
-
-  box-shadow:
-    0 18px 45px
-    rgba(0,70,110,0.08);
-
-  overflow: hidden;
+  /* Your original side/bottom borders, corners, and shadows */
+  border: 1px solid rgba(30, 136, 229, 0.10);
+  border-radius: 16px;          
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+  
+  /* Clips the top gradient line so it matches your 16px rounded corners */
+  overflow: hidden; 
 }
+
 
 .flip-card-front::after {
 
@@ -1961,8 +1964,7 @@
 }
 
 .card-top {
-
-  display: flex;
+ 
 
   align-items: center;
 
@@ -2015,14 +2017,45 @@
     rotate(-8deg)
     scale(1.08);
 }
+.flip-card {
+  width: 400px;
+  height: 320px;
+  min-width: 300px;
+  flex: 0 0 300px;
+  perspective: 1200px;
+  outline: none;
+  cursor: pointer;
+}
 
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Put all cards in one row */
+.flip-cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  overflow-x: auto;
+}
 .flip-card-front h3 {
 
   margin: 25px 0 10px;
 
   color: #092c4c;
-
+FONT:bold;
   font-size: 22px;
+  font-weight: 850;
 
   line-height: 1.25;
 }
@@ -2245,14 +2278,9 @@
 ===================================================== */
 
 .why-section {
-
-  padding:
-    110px 0;
-
-  background:
-    #ffffff;
+  padding: 40px 0;
+  background: #ffffff;
 }
-
 .why-grid {
 
   display: grid;
@@ -2486,8 +2514,7 @@
 
 .audience-section {
 
-  padding:
-    105px 0;
+  padding:0px 0px;
 
   background:
     linear-gradient(
@@ -2496,7 +2523,10 @@
       #ffffff
     );
 }
+.audience-card h3 {
 
+  font-weight: 600;
+}
 .audience-grid {
 
   display: grid;
@@ -2506,29 +2536,34 @@
 
   gap: 18px;
 }
-
 .audience-card {
+  padding: 30px;
+  display:flexbox;
+  flex-direction: column;
+  justify-content: space-between;
 
-  padding:
-    28px 20px;
+  background: 
+     linear-gradient(
+      90deg,
+      #1e88e5,
+      #00e5ff
+    ) top / 100% 4px no-repeat,
+    rgba(255, 255, 255, 0.95);
 
-  text-align: center;
-
-  background: #ffffff;
-
-  border:
-    1px solid
-    #e1f1f6;
-
-  border-radius: 20px;
-
-  box-shadow:
-    0 12px 30px
-    rgba(0,70,110,0.06);
-
+  border: 1px solid rgba(30, 136, 229, 0.10);
+  border-radius: 16px;          
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+  
+  overflow: hidden; 
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
+    
+}
+
+/* Add this rule to push your logo/icon to the left */
+.audience-card .card-icon {
+  align-self:flex-start;                        
 }
 
 .audience-card:hover {
@@ -2546,11 +2581,10 @@
   width: 58px;
   height: 58px;
 
-  margin: 0 auto 18px;
-
+ margin: 0 0 18px auto; 
   display: flex;
 
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 
   border-radius: 17px;
@@ -2560,6 +2594,7 @@
   color: #0077b6;
 
   font-size: 22px;
+  
 }
 
 .audience-card h3 {
@@ -3112,7 +3147,7 @@
 .final-cta {
 
   padding:
-    110px 20px;
+    40px 0px;
 
   text-align: center;
 
@@ -3277,10 +3312,10 @@
     1px solid
     rgba(255,255,255,0.35);
 
-  color: #ffffff;
+   color: #0077b6;
 
-  background:
-    rgba(255,255,255,0.07);
+   background: #ffffff;
+
 }
 
 .final-primary:hover,
@@ -3609,7 +3644,8 @@
   }
 
   .flip-card {
-
+ box-shadow:
+    0 10px 35px rgba(16, 42, 67, 0.07);
     height: 350px;
   }
 
@@ -4027,6 +4063,876 @@
 
     transition-duration:
       0.01ms !important;
+  }
+
+}
+
+/* =========================================
+   WHY SKYLONSYS — THE ADVANTAGE MATRIX
+========================================= */
+
+.advantage-matrix {
+
+  position: relative;
+
+  width: 100%;
+
+  padding: 0px 20px 40px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(0, 171, 228, 0.08),
+      transparent 32%
+    ),
+    #f8fcff;
+
+  color: #092c4c;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.matrix-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.5;
+
+  background-image:
+
+    linear-gradient(
+      rgba(0, 119, 182, 0.035) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(0, 119, 182, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 85%
+    );
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.matrix-glow {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+.matrix-glow-left {
+
+  width: 300px;
+
+  height: 300px;
+
+  left: -160px;
+
+  top: 25%;
+
+  background:
+    rgba(0, 171, 228, 0.07);
+
+  animation:
+    matrixGlowMove 8s ease-in-out infinite;
+}
+
+
+.matrix-glow-right {
+
+  width: 280px;
+
+  height: 280px;
+
+  right: -150px;
+
+  bottom: 10%;
+
+  background:
+    rgba(0, 119, 182, 0.06);
+
+  animation:
+    matrixGlowMove 10s ease-in-out infinite reverse;
+}
+
+
+@keyframes matrixGlowMove {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(35px, -25px);
+  }
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.matrix-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.matrix-header {
+
+  max-width: 760px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.matrix-eyebrow {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 8px 17px;
+
+  border:
+    1px solid rgba(0, 171, 228, 0.25);
+
+  border-radius: 50px;
+
+  background:
+    rgba(0, 171, 228, 0.045);
+
+  color: #0077b6;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform:initial;
+}
+
+
+.matrix-dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #00abe4;
+
+  box-shadow:
+    0 0 10px rgba(0, 171, 228, 0.8);
+
+  animation:
+    matrixDotPulse 1.8s ease-in-out infinite;
+}
+
+
+@keyframes matrixDotPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.6);
+
+    opacity: 0.5;
+  }
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.matrix-title {
+
+  margin: 22px 0 15px;
+
+  color: #092c4c;
+
+  font-size:xx-large;
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+
+.matrix-title span {
+
+  background:
+    linear-gradient(
+      90deg,
+      #0077b6,
+      #00abe4,
+      #0077b6
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  animation:
+    matrixGradient 4s linear infinite;
+}
+
+
+@keyframes matrixGradient {
+
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.matrix-intro {
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #6d8492;
+
+  font-size: 14px;
+
+  line-height: 0.8;
+}
+
+
+  /* =========================================
+    MATRIX LIST
+  ========================================= */
+
+  .matrix-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 0;
+    align-items: start;
+    padding: 12px 0; 
+  }
+
+  .matrix-item {
+    min-height: 0;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  /* =========================================
+    MATRIX ITEM
+  ========================================= */
+
+  .matrix-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 48px 1fr;
+
+    column-gap: 18px;
+
+    min-height: 100px;
+
+    padding: 15px 0 15px;
+
+    border-bottom:
+      1px solid rgba(9, 44, 76, 0.10);
+
+    transition:
+      transform 0.35s ease;
+  }
+
+
+  /* =========================================
+    NUMBER
+========================================= */
+
+.matrix-number {
+
+  padding-top: 3px;
+
+  color:
+    rgba(0, 119, 182, 0.42);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.matrix-item:hover .matrix-number {
+
+  color: #00abe4;
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.matrix-main {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.matrix-item-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+
+.matrix-item h3 {
+
+  margin: 0;
+
+  color: #092c4c;
+
+  font-size: 18px;
+
+  font-weight: 750;
+
+  line-height: 1.3;
+
+  transition:
+    color 0.35s ease;
+}
+
+
+.matrix-item:hover h3 {
+
+  color: #0077b6;
+}
+
+
+.matrix-item-top i {
+
+  flex-shrink: 0;
+
+  font-size: 11px;
+
+  color:
+    rgba(0, 119, 182, 0.35);
+
+  transform:
+    rotate(0deg);
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.matrix-item:hover .matrix-item-top i {
+
+  color: #00abe4;
+
+  transform:
+    rotate(45deg);
+}
+
+
+.matrix-item p {
+
+  max-width: 440px;
+
+margin-bottom: 0%;
+  color: #718795;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   CYAN ANIMATION LINE
+========================================= */
+
+.matrix-line {
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -1px;
+
+  width: 100%;
+
+  height: 3px;
+
+  overflow: hidden;
+
+  background:
+    rgba(0, 171, 228, 0.04);
+}
+
+
+.matrix-line span {
+
+  position: absolute;
+
+  left: -35%;
+
+  top: 0;
+
+  width: 35%;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #00abe4,
+      #0077b6,
+      transparent
+    );
+
+  box-shadow:
+    0 0 10px rgba(0, 171, 228, 0.45);
+
+  opacity: 0;
+
+  animation:
+    matrixSweep 3.5s ease-in-out infinite;
+}
+
+
+@keyframes matrixSweep {
+
+  0% {
+
+    left: -35%;
+
+    opacity: 0;
+  }
+
+  15% {
+
+    opacity: 1;
+  }
+
+  60% {
+
+    opacity: 1;
+  }
+
+  100% {
+
+    left: 100%;
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================
+   DIFFERENT ANIMATION DELAYS
+========================================= */
+
+.matrix-item:nth-child(1)
+.matrix-line span {
+
+  animation-delay: 0s;
+}
+
+
+.matrix-item:nth-child(2)
+.matrix-line span {
+
+  animation-delay: 0.6s;
+}
+
+
+.matrix-item:nth-child(3)
+.matrix-line span {
+
+  animation-delay: 1.2s;
+}
+
+
+.matrix-item:nth-child(4)
+.matrix-line span {
+
+  animation-delay: 1.8s;
+}
+
+
+.matrix-item:nth-child(5)
+.matrix-line span {
+
+  animation-delay: 2.4s;
+}
+
+
+.matrix-item:nth-child(6)
+.matrix-line span {
+
+  animation-delay: 3s;
+}
+
+
+/* =========================================
+   HOVER LINE
+========================================= */
+
+.matrix-item:hover .matrix-line span {
+
+  animation:
+    matrixHoverSweep 0.8s ease-out forwards;
+
+  opacity: 1;
+}
+
+
+@keyframes matrixHoverSweep {
+
+  0% {
+
+    left: -35%;
+
+  }
+
+  100% {
+
+    left: 100%;
+
+  }
+
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.matrix-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  margin-top: 0%;
+}
+
+
+.matrix-footer-line {
+
+  width: 130px;
+
+  height: 1px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 171, 228, 0.4)
+    );
+}
+
+
+.matrix-footer-line:last-child {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 171, 228, 0.4),
+      transparent
+    );
+}
+
+
+.matrix-footer-content {
+
+  text-align: center;
+}
+
+
+.matrix-footer-small {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #00a0d4;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.matrix-footer strong {
+
+  display: block;
+
+  color: #092c4c;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .matrix-list {
+
+    column-gap: 40px;
+  }
+
+
+  .matrix-item {
+
+    grid-template-columns:
+      40px 1fr;
+
+    column-gap: 12px;
+  }
+
+
+  .matrix-item h3 {
+
+    font-size: 16px;
+  }
+
+
+  .matrix-item p {
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .advantage-matrix {
+
+    padding:
+      75px 18px 65px;
+  }
+
+
+  .matrix-header {
+
+    margin-bottom: 45px;
+  }
+
+
+  .matrix-title {
+
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .matrix-intro {
+
+    font-size: 13px;
+  }
+
+
+  .matrix-list {
+
+    grid-template-columns: 1fr;
+
+    border-top:
+      1px solid rgba(9, 44, 76, 0.12);
+  }
+
+
+  .matrix-item {
+
+    min-height: auto;
+
+    padding:
+      25px 0;
+
+    grid-template-columns:
+      40px 1fr;
+  }
+
+
+  .matrix-item h3 {
+
+    font-size: 16px;
+  }
+
+
+  .matrix-item p {
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  .matrix-footer {
+
+    gap: 10px;
+
+    margin-top: 0px;
+  }
+
+
+  .matrix-footer-line {
+
+    width: 35px;
+  }
+
+
+  .matrix-footer strong {
+
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+
+
+  .matrix-footer-small {
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .matrix-title {
+
+    font-size: 33px;
+  }
+
+
+  .matrix-item {
+
+    grid-template-columns:
+      34px 1fr;
+  }
+
+
+  .matrix-number {
+
+    font-size: 10px;
   }
 
 }
