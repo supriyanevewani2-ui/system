@@ -101,7 +101,36 @@ export class CoursessComponent {
         'AI'
       ]
     },
+// =======================================================
+// 12. SAP S/4HANA
+// =======================================================
 
+{
+  title: 'SAP S/4HANA',
+
+  icon: 'fas fa-cubes',
+
+  duration: '3 Months',
+
+  level: 'Beginner to Intermediate',
+
+  mode: 'Online / Offline',
+
+  description:
+    'Learn SAP S/4HANA business processes with practical hands-on training covering Sales, Procurement, Inventory, Finance and key enterprise operations.',
+
+  technologies: [
+    'SAP S/4HANA',
+    'SAP Fiori',
+    'Sales & Distribution',
+    'Procurement',
+    'Inventory Management',
+    'Finance',
+    'Business Processes',
+    'SAP GUI',
+    'S/4HANA Cloud'
+  ]
+},
  // =======================================================
     // 11. INVESTMENT BANKING WITH AI
     // =======================================================

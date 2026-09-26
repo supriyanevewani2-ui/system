@@ -3612,7 +3612,7 @@ FONT:bold;
   .growth-section {
 
     padding:
-      80px 0;
+      35px 0;
   }
 
   .section-heading {
@@ -4935,4 +4935,96 @@ margin-bottom: 0%;
     font-size: 10px;
   }
 
+   .flip-cards-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 12px;
+  }
+
+  .flip-card {
+    width: calc(100vw - 40px);
+    min-width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
+    flex-basis: calc(100vw - 40px);
+  }
+}
+/* =====================================================
+   MOBILE COURSE CARD ALIGNMENT FIX
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+  .flip-cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 12px 10px;
+    box-sizing: border-box;
+  }
+
+  .flip-card {
+    width: calc(100vw - 48px);
+    min-width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+    flex: 0 0 calc(100vw - 48px);
+
+    height: 355px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+/* =====================================================
+   MOBILE COURSE CARD ALIGNMENT
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .section-container {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .flip-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .flip-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .what-we-do-section {
+    padding-bottom: 0 !important;
+  }
+
+  .why-section {
+    padding-top: 0 !important;
+  }
+
+  .why-section .section-heading {
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+  }
 }
